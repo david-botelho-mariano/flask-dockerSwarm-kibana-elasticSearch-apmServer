@@ -7,7 +7,8 @@ import os
 
 app = Flask(__name__)
 
-apm = ElasticAPM(app, server_url='http://apm-server:8200', service_name='servico-flask', logging=True)
+#apm = ElasticAPM(app, server_url='http://apm-server:8200', service_name='servico-flask', logging=True)
+apm = ElasticAPM(app, server_url='http://apm-server:8200', service_name='servico-flask')
 
 @app.route("/")
 def index():
